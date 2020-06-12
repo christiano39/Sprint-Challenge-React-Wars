@@ -17,6 +17,7 @@ const App = () => {
     axios.get(`https://swapi.py4e.com/api/people/?page=${page}`)
       .then(res => {
         setCharactersData(res.data)
+        console.log(res.data.results)
       })
       .catch(err => {
         setCharactersData(null)
@@ -28,7 +29,7 @@ const App = () => {
       <h1 className="Header">Characters</h1>
       {
         charactersData ? charactersData.results.map(char => {
-          return <Character key={char.name} name={char.name} height={char.height} mass={char.mass} />
+          return <Character key={char.name} name={char.name} height={char.height} mass={char.mass} gender={char.gender} />
         })
         : <h2>Whoops! Looks like there's no data to display :(</h2>
       }
