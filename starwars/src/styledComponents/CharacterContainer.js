@@ -10,12 +10,17 @@ export default styled.div`
     margin: 20px auto;
     border: 3px solid black;
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    padding: 10px 0;
 
     span {
         font-weight: bold;
     }
 
     p {
+        margin: 5px 0;
+    }
+
+    h2 {
         margin: 5px 0;
     }
 `
