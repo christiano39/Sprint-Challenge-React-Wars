@@ -7,9 +7,9 @@ export default function Character(props) {
     return (
         <CharacterContainer>
             <h2>{name}</h2>
-            <p>Height: {height}</p>
-            <p>Mass: {mass}</p>
-            <p>Gender: {gender}</p>
+            <p>Height: <span>{height}</span></p>
+            <p>Mass: <span>{mass}</span></p>
+            <p>Gender: <span>{gender}</span></p>
         </CharacterContainer>
     )
 }

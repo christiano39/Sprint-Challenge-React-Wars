@@ -9,4 +9,9 @@ export default styled.div`
     width: 400px;
     margin: 20px auto;
     border: 3px solid black;
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+
+    span {
+        font-weight: bold;
+    }
 `
