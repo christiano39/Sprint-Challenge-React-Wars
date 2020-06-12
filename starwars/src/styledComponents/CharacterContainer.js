@@ -9,8 +9,9 @@ export default styled.div`
     width: 400px;
     margin: 20px auto;
     border: 3px solid black;
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px yellow;
     padding: 10px 0;
+    border-radius: 10px;
 
     span {
         font-weight: bold;
@@ -22,5 +23,10 @@ export default styled.div`
 
     h2 {
         margin: 5px 0;
+    }
+
+    button {
+        padding: 0 40px;
+        margin: 5px 0 0;
     }
 `

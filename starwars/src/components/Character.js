@@ -26,13 +26,13 @@ export default function Character(props) {
         <CharacterContainer>
             <h2>{name}</h2>
             {  open ?
-            <div>
-                <p>Height: <span>{height}</span></p>
-                <p>Mass: <span>{mass}</span></p>
-                <p>Gender: <span>{gender}</span></p>
-                <p>Home World: <span>{homeWorldName}</span></p>
-            </div>
-            : ''
+                <div>
+                    <p>Height: <span>{height}</span></p>
+                    <p>Mass: <span>{mass}</span></p>
+                    <p>Gender: <span>{gender}</span></p>
+                    <p>Home World: <span>{homeWorldName}</span></p>
+                </div>
+                : ''
             }
             <button onClick={handleClick}>{open ? UP : DOWN}</button>
         </CharacterContainer>
