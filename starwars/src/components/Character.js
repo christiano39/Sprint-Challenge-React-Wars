@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CharacterContainer from '../styledComponents/CharacterContainer'
 import axios from 'axios'
+import { UP, DOWN } from '../Constants'
 
 export default function Character(props) {
     const { name, height, mass, gender, homeWorld } = props
@@ -33,7 +34,7 @@ export default function Character(props) {
             </div>
             : ''
             }
-            <button onClick={handleClick}>Expand/Collapse</button>
+            <button onClick={handleClick}>{open ? UP : DOWN}</button>
         </CharacterContainer>
     )
 }
