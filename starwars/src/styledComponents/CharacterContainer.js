@@ -29,4 +29,8 @@ export default styled.div`
         padding: 0 40px;
         margin: 5px 0 0;
     }
+
+    @media (max-width: 500px) {
+        width: 90%;
+    }
 `

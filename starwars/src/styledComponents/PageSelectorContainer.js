@@ -12,4 +12,8 @@ export default styled.div`
         font-size: 24px;
         margin: 0 10px;
     }
+
+    @media (max-width: 500px) {
+        width: 80%;
+    }
 `
