@@ -14,4 +14,8 @@ export default styled.div`
     span {
         font-weight: bold;
     }
+
+    p {
+        margin: 5px 0;
+    }
 `

@@ -1,8 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import CharacterContainer from '../styledComponents/CharacterContainer'
+import axios from 'axios'
 
 export default function Character(props) {
-    const { name, height, mass, gender } = props
+    const { name, height, mass, gender, homeWorld } = props
+    const [homeWorldName, setHomeWorldName] = useState('')
+    useEffect(() => {
+        axios.get(homeWorld)
+            .then(res => {
+                setHomeWorldName(res.data.name)
+            })
+            .catch(err => {
+                setHomeWorldName('unavailable')
+            })
+    }, [homeWorldName, homeWorld])
 
     return (
         <CharacterContainer>
@@ -10,6 +21,7 @@ export default function Character(props) {
             <p>Height: <span>{height}</span></p>
             <p>Mass: <span>{mass}</span></p>
             <p>Gender: <span>{gender}</span></p>
+            <p>Home World: <span>{homeWorldName}</span></p>
         </CharacterContainer>
     )
 }
